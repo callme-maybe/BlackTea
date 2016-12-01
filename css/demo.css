@@ -1,0 +1,45 @@
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    color: black;
+    background: white;
+}
+
+::selection {
+    color: black;
+    background: white;
+}
+
+body {
+    font-family: 'Roboto', 'Avenir Next', sans-serif;
+    color: #fff;
+    background: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+
+a:hover, a:focus {
+    color: #b8b8b8;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}

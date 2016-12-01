@@ -1,0 +1,296 @@
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    color: black;
+    background: white;
+}
+
+::selection {
+    color: black;
+    background: white;
+}
+
+body {
+    font-family: 'Roboto', 'Avenir Next', sans-serif;
+    color: #fff;
+    background: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+
+a:hover, a:focus {
+    color: #b8b8b8;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* COMMON DEMO STYLE */
+
+.transition {
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 108px;
+    font-family: "Autour One";
+    color: #fff;
+}
+
+.page-view {
+    height: 750px;
+    width: 100%;
+}
+
+.page-view .project {
+    padding-top: 260px;
+    position: absolute;
+    width: 100%;
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 4rem;
+}
+
+.page-view .project:nth-child(1) {
+    z-index: 30;
+}
+
+.page-view .arrows {
+    position: absolute;
+    top: 700px;
+    left: 100px;
+    z-index: 100;
+}
+
+.page-view .arrows .arrow {
+    float: left;
+    cursor: pointer;
+}
+
+.page-view .arrows .arrow.next {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-top: -11px;
+}
+
+.page-view .arrows .arrow:hover.previous {
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: -moz-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transform: translate3d(-5px, 0, 0);
+    -moz-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+}
+/*cubic-bezier 贝塞尔曲线*/
+.page-view .arrows .arrow:hover.next {
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: -moz-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transform: translate3d(5px, 0, 0) rotate(180deg);
+    -moz-transform: translate3d(5px, 0, 0) rotate(180deg);
+    transform: translate3d(5px, 0, 0) rotate(180deg);
+}
+
+.page-view .arrows .arrow svg {
+    height: 40px;
+    width: 25px;
+    padding: 2px;
+}
+.page-view .arrows .arrow svg polygon {
+    fill: #fff;
+}
+
+.page-view .arrows .arrow {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition: transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    margin-right: 10px;
+    margin-top: -7px;
+}
+
+@media screen and (max-width: 640px) {
+    .page-view .project {
+        padding-top: 0;
+    }
+    .page-view .arrows {
+        bottom: 60px;
+        left: 50%;
+        z-index: 120;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .page-view .arrows .arrow.previous:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
+    }
+    .page-view .arrows .arrow.next:hover {
+        -webkit-transform: translate3d(0, 0, 0) rotate(180deg);
+        -moz-transform: translate3d(0, 0, 0) rotate(180deg);
+        transform: translate3d(0, 0, 0) rotate(180deg);
+    }
+}
+
+@-webkit-keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+        -moz-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        -moz-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+        -moz-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        -moz-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@-moz-keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+        -moz-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        -moz-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+        -moz-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        -moz-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+
+/* SPECIFIC DEMO STYLE */
+
+@font-face {
+    font-family: 'adam';
+    src: url('../fonts/adam/adam.eot');
+    src: url('../fonts/adam/adam.eot?#iefix') format('embedded-opentype'), url('../fonts/adam/adam.woff2') format('woff2'), url('../fonts/adam/adam.woff') format('woff'), url('../fonts/adam/adam.ttf') format('truetype'), url('../fonts/adam/adam.svg#adam.cg_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.transition {
+    background: url(../img/building-sprite.png) no-repeat -9999px -9999px;
+}
+
+.transition .page-view {
+    background: url(../img/building-sprite-2.png) no-repeat -9999px -9999px;
+}
+
+.transition .page-view h1 {
+    text-transform: uppercase;
+    letter-spacing: 16px;
+    font-family: 'adam';
+}
+
+@media screen and (max-width: 640px) {
+    .transition .page-view h1 {
+        letter-spacing: 4px;
+    }
+}
+
+.transition .page-view .project:nth-child(1) {
+    background-image: url(../Assets/images/intro_1-rev.jpg);
+    background-attachment: fixed;
+}
+
+.transition .page-view .project:nth-child(2) {
+    background-image: url(../Assets/images/intro_2-rev.jpg);
+    background-attachment: fixed;
+}
+
+.transition .page-view .project:nth-child(3) {
+    background-image: url(../Assets/images/intro_3-rev.jpg);
+    background-attachment: fixed;
+}
+
+.transition .page-view .project:nth-child(4) {
+    background-image: url(../Assets/images/intro_4-rev.jpg);
+    background-attachment: fixed;
+}
+
+.transition .page-view .project:nth-child(odd).hide {
+    -webkit-mask: url(../img/building-sprite.png);
+    -moz-mask: url(../img/building-sprite.png);
+    mask: url(../img/building-sprite.png);
+    -webkit-mask-size: 7500% 100%;
+    -moz-mask-size: 7500% 100%;
+    mask-size: 7500% 100%;
+    -webkit-animation: mask-play 1.4s steps(74) forwards;
+    -moz-animation: mask-play 1.4s steps(74) forwards;
+    animation: mask-play 1.4s steps(74) forwards;
+}
+
+.transition .page-view .project:nth-child(even).hide {
+    -webkit-mask: url(../img/urban-sprite.png);
+    -moz-mask: url(../img/urban-sprite.png);
+    mask: url(../img/urban-sprite.png);
+    -webkit-mask-size: 3000% 100%;
+    -moz-mask-size: 3000% 100%;
+    mask-size: 3000% 100%;
+    -webkit-animation: mask-play 1.4s steps(29) forwards;
+    -moz-animation: mask-play 1.4s steps(29) forwards;
+    animation: mask-play 1.4s steps(29) forwards;
+}
+
+
+/* Fallback */
+
+.no-cssmask .page-view .project.hide {
+    opacity: 0;
+    -webkit-transition: opacity 1.4s ease;
+    -moz-transition: opacity 1.4s ease;
+    transition: opacity 1.4s ease;
+    -webkit-mask: none !important;
+    -moz-mask: none !important;
+    mask: none !important;
+}

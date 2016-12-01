@@ -1,0 +1,14 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font-family:Verdana, Geneva, sans-serif;background:#eeeeee;font-size:12px;}
+
+/* featured-area */
+#featured-area{height:305px;width:1250px;margin:30px auto 0 auto; position:relative; z-index:99;}
+.roundabout-holder{list-style:none;width:610px;height:305px;margin:0px auto;}
+.roundabout-moveable-item{font-size:12px!important;height:305px;width:610px;cursor:pointer; z-index:99;}
+.roundabout-moveable-item img{height:100%;width:100%;margin:0;}
+.roundabout-in-focus{cursor:auto;}
+.roundabout-holder span{display:none;}
+.roundabout a:active, .roundabout a:focus, .roundabout a:visited{outline:none;text-decoration:none;}
+.roundabout li{margin:0}
